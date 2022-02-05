@@ -5,5 +5,9 @@ import App from './App'
 import ConditionalApp from './ConditionalApp'
 import UseStateApp from './UseStateApp'
 import UseReducer from './UseReducer'
+import FetchingData from './FetchingData'
 
-ReactDOM.render(<UseReducer />, document.getElementById('root'))
+ReactDOM.render(
+  <FetchingData login={'sevrinn'} />,
+  document.getElementById('root')
+)
