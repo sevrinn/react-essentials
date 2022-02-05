@@ -1,26 +1,26 @@
 import logo from './logo.svg'
 import './App.css'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
-      <h1>Sev's Kitchen</h1>
+      <h1>{props.name}'s Kitchen</h1>
     </header>
   )
 }
 
-const Main = () => {
+const Main = (props) => {
   return (
     <section>
-      <p>We serve the most delicious food around.</p>
+      <p>We serve the most {props.adjective} food around.</p>
     </section>
   )
 }
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer>
-      <p>It's true</p>
+      <p>Copyright {props.year}</p>
     </footer>
   )
 }
@@ -28,9 +28,9 @@ const Footer = () => {
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <Main />
-      <Footer />
+      <Header name='Frogger' />
+      <Main adjective='amazing' />
+      <Footer year={new Date().getFullYear()} />
     </div>
   )
 }
