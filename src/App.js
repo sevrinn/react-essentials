@@ -1,6 +1,15 @@
 import logo from './logo.svg'
 import './App.css'
 
+const dishes = [
+  'Mac and Cheez',
+  'Mushroom Yum Yum',
+  'Tofu with Vegetable',
+  'Minestrone',
+]
+
+const dishObjects = dishes.map((dish, i) => ({ id: i, title: dish }))
+
 const Header = (props) => {
   return (
     <header>
@@ -14,8 +23,8 @@ const Main = (props) => {
     <section>
       <p>We serve the most {props.adjective} food around.</p>
       <ul style={{ textAlign: 'left' }}>
-        {dishes.map((dish, i) => (
-          <li key={i}>{dish}</li>
+        {props.dishes.map((dish) => (
+          <li key={dish.id}>{dish.title}</li>
         ))}
       </ul>
     </section>
@@ -30,18 +39,11 @@ const Footer = (props) => {
   )
 }
 
-const dishes = [
-  'Mac and Cheez',
-  'Mushroom Yum Yum',
-  'Tofu with Vegetable',
-  'Minestrone',
-]
-
 function App() {
   return (
     <div className='App'>
       <Header name='Frogger' />
-      <Main adjective='amazing' dishes={dishes} />
+      <Main adjective='amazing' dishes={dishObjects} />
       <Footer year={new Date().getFullYear()} />
     </div>
   )
