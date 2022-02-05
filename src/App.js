@@ -14,8 +14,8 @@ const Main = (props) => {
     <section>
       <p>We serve the most {props.adjective} food around.</p>
       <ul style={{ textAlign: 'left' }}>
-        {dishes.map((dish) => (
-          <li>{dish}</li>
+        {dishes.map((dish, i) => (
+          <li key={i}>{dish}</li>
         ))}
       </ul>
     </section>
@@ -30,7 +30,12 @@ const Footer = (props) => {
   )
 }
 
-const dishes = ['Mac and Cheez', 'Mushroom Yum Yum', 'Tofu with Vegetable']
+const dishes = [
+  'Mac and Cheez',
+  'Mushroom Yum Yum',
+  'Tofu with Vegetable',
+  'Minestrone',
+]
 
 function App() {
   return (
