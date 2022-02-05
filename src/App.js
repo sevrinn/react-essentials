@@ -1,5 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
+import restaurant from './images/restaurant.jpg'
 
 const dishes = [
   'Mac and Cheez',
@@ -22,6 +23,7 @@ const Main = (props) => {
   return (
     <section>
       <p>We serve the most {props.adjective} food around.</p>
+      <img src={restaurant} alt='restaurant' style={{ width: '300px' }} />
       <ul style={{ textAlign: 'left' }}>
         {props.dishes.map((dish) => (
           <li key={dish.id}>{dish.title}</li>
