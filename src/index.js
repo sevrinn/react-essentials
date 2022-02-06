@@ -6,8 +6,7 @@ import ConditionalApp from './ConditionalApp'
 import UseStateApp from './UseStateApp'
 import UseReducer from './UseReducer'
 import FetchingData from './FetchingData'
+import ReactTesting from './ReactTesting'
+import Checkbox from './Checkbox'
 
-ReactDOM.render(
-  <FetchingData login={'sevrinn'} />,
-  document.getElementById('root')
-)
+ReactDOM.render(<Checkbox />, document.getElementById('root'))
